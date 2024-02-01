@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <script src="myscript.js"></script>
+    <title>Assignment 2</title>
+</head>
+
+<body style="background-color: white;">
+    <nav class="navbar navbar-light" style="background-color: black;color: white;">
+        <div class="container-fluid">
+            <a class="navbar-brand">Login-Signup form</a>
+        </div>
+    </nav>
+    <div class="heading">
+        <br>
+        <a href="Register.html">Register / </a><a href="Login.html"> Login</a>
+    </div>
+    <br>
+    <br>
+    <div class="center-form" style="width: 40%;">
+        <center>
+            <img src="Loginpage.png" style="width: 40%;">
+            <form id="loginForm">
+                <h2>Login Form</h2>
+                <br><br>
+                <label>Enter Your Name:</label>
+                <input type="text" name="name" id="nameInput" placeholder="Enter Your Name">
+                <br><br>
+                <label>Enter Password:</label>
+                <input type="password" name="password" id="passwordInput" placeholder="Enter Password">
+                <br><br>
+                <input type="checkbox" onclick="myFunctionpass()">Show Password
+                <button type="button" class="btn btn-secondary" onclick="openRegister()">New User</button>
+                <br><br>
+                <button type="button" onclick="validateLoginForm()" class="btn btn-secondary">Submit</button>
+            </form>
+        </center>
+        <br><br><br>
+    </div>
+</body>
+
+</html>

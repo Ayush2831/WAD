@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="myscript.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Register Page</title>
+</head>
+
+<body style="background-color: white;">
+    <nav class="navbar navbar-dark" style="background-color:black;">
+        <div class="container-fluid">
+            <a class="navbar-brand">Navbar</a>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <div class="heading">
+        <h1 style="color:black;">Registration Form</h1>
+    </div>
+    <br><br>
+    <div class="center-form">
+        <center>
+            <img src="Loginpage.png" style="width: 40%;">
+
+            <form id="registrationForm" onsubmit="return validateRegistrationForm();">
+                <label>Enter Your Id:</label>
+                <input type="text" name="Id" id="IdInput" placeholder="Enter Your Id" required>
+                <br><br>
+                <label>Enter Your Name:</label>
+                <input type="text" name="name" id="nameInput" placeholder="Enter Your Name" required>
+                <br><br>
+                <label>Enter Your Birthdate:</label>
+                <input type="date" name="birthdate" id="birthdateInput" max="2004-01-01" required>
+                <br><br>
+                <label>Enter Your Email:</label>
+                <input type="email" name="e-mail" id="emailInput" placeholder="Name@Example.com" required>
+                <br><br>
+                <label>Enter Password:</label>
+                <input type="password" name="password" id="passwordInput" placeholder="Enter Password" required>
+                <input type="checkbox" onclick="myFunctionpass()">Show Password
+                <br><br>
+                <label>Gender: </label>
+                <input type="radio" name="gender" value="Male" id="maleRadio" required> <label for="maleRadio">Male</label>
+                <input type="radio" name="gender" value="Female" id="femaleRadio" required> <label for="femaleRadio">Female</label>
+                <br><br>
+                <label>Enter Your Hobbies:</label>
+                <textarea rows="2" cols="40" name="hobbies" id="hobbiesInput" placeholder="Enter Your Hobbies here..." required></textarea>
+                <br><br>
+                <label>Enter Your City:</label>
+                <select name="city" id="city" required>
+                    <option value="Pune">Pune</option>
+                    <option value="Nagpur">Nagpur</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Bangalore">Bangalore</option>
+                    <option value="Other">Other</option>
+                </select>
+                <br><br>
+                <label>Enter Your State :</label>
+                <select name="state" id="state" required>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                    <option value="Other">Other</option>
+                </select>
+                <br><br>
+                <label>Enter your PinCode :</label>
+                <input type="text" name="PinCode" id="PinCodeInput" placeholder="Enter Your PinCode" required>
+                <br><br>
+                <button type="button" onclick="validateRegistrationForm()" class="btn btn-primary">Submit</button>
+                <button type="button" onclick="showInputs()" class="btn btn-danger">Cancel</button>
+            </form>
+            
+
+            
+        </center>
+        <br><br><br>
+    </div>
+</body>
+
+</html>

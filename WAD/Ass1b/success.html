@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View User Data</title>
+</head>
+
+<body style="background-color: #f0f0f0; text-align: center; padding: 50px;">
+
+    <h1>View User Data</h1>
+
+    <div id="userDataContainer">
+    </div>
+
+    <script>
+        var storedUserData = localStorage.getItem('userData');
+        if (storedUserData) {
+            var userData = JSON.parse(storedUserData);
+
+            var userDataContainer = document.getElementById('userDataContainer');
+            userDataContainer.innerHTML = "<strong>User Data:</strong><br>" +
+                "ID: " + userData.id + "<br>" +
+                "Name: " + userData.name + "<br>" +
+                "Birth Date: " + userData.birthdate + "<br>" +
+                "Email: " + userData.email + "<br>" +
+                "Gender: " + userData.gender + "<br>" +
+                "Hobbies: " + userData.hobbies + "<br>" +
+                "City: " + userData.city + "<br>" +
+                "State: " + userData.state + "<br>" +
+                "Pin Code: " + userData.pinCode;
+        } else {
+            document.getElementById('userDataContainer').innerText = "No user data found.";
+        }
+    </script>
+
+</body>
+
+</html>
